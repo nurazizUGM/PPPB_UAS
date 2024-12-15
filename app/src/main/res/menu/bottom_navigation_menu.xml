@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/mdi_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/savedFragment"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/mdi_book_favorite"
+        android:title="Saved" />
+    <item
+        android:id="@+id/profileFragment"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/mdi_user_circle"
+        android:title="Profile" />
+</menu>
