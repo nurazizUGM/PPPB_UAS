@@ -16,8 +16,7 @@ import com.example.ppapb_uas.databinding.ActivityMainBinding
 import com.example.ppapb_uas.network.ApiService
 import com.example.ppapb_uas.ui.auth.AuthActivity
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import retrofit2.HttpException
+
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }

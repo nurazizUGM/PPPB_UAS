@@ -101,6 +101,7 @@ class HomeFragment : Fragment() {
                         LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                     progressBar.visibility = View.GONE
                     ivEmpty.visibility = View.GONE
+                    ivNetworkError.visibility = View.GONE
                     rvProduct.visibility = View.VISIBLE
                 }
             } catch (e: Exception) {
@@ -115,7 +116,7 @@ class HomeFragment : Fragment() {
 
     private fun onNetworkError() {
         with(binding) {
-            if (progressBar.visibility.equals(View.VISIBLE)) {
+            if (progressBar.visibility == View.VISIBLE) {
                 progressBar.visibility = View.GONE
                 ivNetworkError.visibility = View.VISIBLE
             }

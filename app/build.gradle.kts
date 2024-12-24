@@ -39,9 +39,10 @@ android {
     }
     packaging {
         resources {
-            pickFirsts.add("META-INF/services/javax.xml.stream.XMLInputFactory")
-            pickFirsts.add("META-INF/services/javax.xml.stream.XMLOutputFactory")
-            pickFirsts.add("META-INF/services/javax.xml.stream.XMLEventFactory")
+            excludes.add("META-INF/INDEX.LIST")
+            excludes.add("META-INF/DEPENDENCIES")
+            excludes.add("META-INF/io.netty.versions.properties")
+            excludes.add("org/apache/http/**")
         }
     }
 }
@@ -70,11 +71,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.jbcrypt)
     implementation(libs.picasso)
-    implementation(libs.minio){
-        exclude(group = "javax.xml")
-    }
-    implementation(libs.stax2.api)
-    implementation(libs.woodstox.core)
-    implementation(libs.stax.api)
     implementation(libs.androidx.recyclerview)
+    implementation(libs.s3)
+    implementation(libs.auth)
 }

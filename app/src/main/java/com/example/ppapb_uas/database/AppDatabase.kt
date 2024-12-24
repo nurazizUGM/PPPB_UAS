@@ -8,7 +8,7 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.ppapb_uas.models.Product
 
-@Database(entities = [Product::class], version = 2)
+@Database(entities = [Product::class], version = 2, exportSchema = false)
 abstract class AppDatabase:RoomDatabase() {
 
     abstract fun productDao(): ProductDao
